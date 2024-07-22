@@ -1,0 +1,168 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: hidden; /* Hide overflow for animation */
+    box-sizing: border-box;
+}
+
+.header .marquee {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%; /* Start off-screen */
+    animation: marquee 30s linear infinite;
+    /* Ensure the text width is set correctly to enable seamless scrolling */
+    width: 100%; /* Ensure marquee takes full width */
+}
+
+.sidebar {
+    width: 130px;
+    background-color: #2596be;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 30px; /* Adjust based on header height */
+    bottom: 30px; /* Adjust based on footer height */
+    left: 0;
+    overflow-y: auto;
+    height: calc(100vh - 120px);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    margin-left: 220px; /* Adjust margin to account for sidebar width */
+    padding: 20px;
+    margin-top: 70px; /* Adjust margin to account for header height */
+    flex-grow: 1;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer {
+    background: #f4f4f4;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+footer .copyright {
+    font-weight: bold;
+    color: black;
+}
+
+footer .system-name {
+    color: rgb(23, 0, 128); /* Same color as the sidebar */
+}
+
+/* Keyframes for marquee animation */
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+/* Container for the authentication forms */
+.auth-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: calc(50vh - 50px); /* Adjust based on desired vertical space */
+    margin-top: 50px; /* Adjust this margin to move the box higher or lower */
+    flex-direction: column; /* Stack the boxes vertically */
+    gap: 20px; /* Space between boxes */
+    margin-right: 70px;
+}
+
+.auth-box {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 100%; /* Responsive width */
+}
+
+.auth-box h2 {
+    margin-top: 0;
+}
+
+.auth-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-box label {
+    margin: 5px 0;
+}
+
+.auth-box input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.auth-box button {
+    padding: 10px;
+    border: none;
+    background-color: green;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.auth-box button:hover {
+    background-color: darkgreen;
+}
+
+.auth-box p {
+    margin-top: 10px;
+    text-align: center;
+}
+
