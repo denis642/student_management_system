@@ -61,8 +61,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['register'])) {
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="header">
-        <div class="marquee">Welcome to the Student Management System. For any assistance, feel free to contact the Admin. Thank you!</div>
+<div class="header">
+        <div class="marquee">
+            <h2 class="header-title">Welcome to the Student Management System. For any assistance, feel free to contact the Admin. Thank you!</h2>
+        </div>
     </div>
     <div class="sidebar">
         <ul>
